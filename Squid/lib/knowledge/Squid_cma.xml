@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<KMFile description="PATROL for Squid" majorVersion="1" minorVersion="7" package="Squid" productcode="Squid" release="2019.107" revision="00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="KMFile.xsd">
+<Applications>
+	<Application active="true" category="Squid systems" createIcon="false" discovery="PSL" discoveryTime="60" displayName="Squid monitor" name="Squid_cma" propagateState="true" security="false" suspendGlobalParams="false" type="">
+      <PreDiscoveryText serial="1555330408">function deleteEmptyFields (instancerRootPath)
+{
+	local argsList, tempAtt, TROPath;
+	# ends with "Path" is just indicator to know the Path for other non mandatory variables like "Arguments" and "RegEx"
+	argsList = grep("^/ConfigData/" . instancerRootPath.".*Path$", pconfig("LIST"));
+	argsList = trim(replace(argsList, "/Path", ""), "\n", TRIM_LEADING_AND_TRAILING);
+	
+	foreach attr (argsList)
+	{
+		# delete Arguments
+		tempAtt = attr."/Arguments";
+		if(trim(pconfig("GET", tempAtt), "\n", TRIM_LEADING_AND_TRAILING) == "")
+		{
+			TROPath = replace(tempAtt, "/ConfigData/" . instancerRootPath, "/TRO/TRO_Root");
+			pconfig("DELETE", TROPath);
+		}
+		
+		# delete RegEx
+		tempAtt = attr."/RegEx";
+		if(trim(pconfig("GET", tempAtt), "\n", TRIM_LEADING_AND_TRAILING) == "")
+		{
+			TROPath = replace(tempAtt, "/ConfigData/" . instancerRootPath, "/TRO/TRO_Root");
+			pconfig("DELETE", TROPath);
+		}
+
+		# delete ScriptTimeout
+		tempAtt = attr."/ScriptTimeout";
+		if(trim(pconfig("GET", tempAtt), "\n", TRIM_LEADING_AND_TRAILING) == "")
+		{
+			TROPath = replace(tempAtt, "/ConfigData/" . instancerRootPath, "/TRO/TRO_Root");
+			pconfig("DELETE", TROPath);
+		}
+
+		# delete ScriptPollInterval
+		tempAtt = attr."/ScriptPollInterval";
+		if(trim(pconfig("GET", tempAtt), "\n", TRIM_LEADING_AND_TRAILING) == "")
+		{
+			TROPath = replace(tempAtt, "/ConfigData/" . instancerRootPath, "/TRO/TRO_Root");
+			pconfig("DELETE", TROPath);
+		}
+	}
+}
+
+function syncConfiguration(instancerRootPath)
+{
+	oldDeviceName = "";
+	txn = trim(pconfig("GET", "/ConfigData/txn_id"), "\n", TRIM_ALL);
+	
+	if (txn != get("txn_id"))
+	{
+		foreach attr (grep("^/ConfigData/" . instancerRootPath, pconfig("LIST")))
+		{
+			pconfig("REPLACE", replace(attr, "/ConfigData/" . instancerRootPath, "/TRO/TRO_Root"), pconfig("GET", attr));
+			theDeviceName = nthargf(attr, "5", "/");
+		
+			if (oldDeviceName == "" || oldDeviceName != theDeviceName)
+			{
+				sec_store_set("/TRO/TRO_Root/Devices/" . theDeviceName . "/Password", sec_store_get("/ConfigData/" . instancerRootPath . "/Devices/" . theDeviceName . "/Password"), "TRO_Root;TRO_Device");
+				sec_store_set("/TRO/TRO_Root/Devices/" . theDeviceName . "/PassPhrase", sec_store_get("/ConfigData/" . instancerRootPath . "/Devices/" . theDeviceName . "/PassPhrase"), "TRO_Root;TRO_Device");
+				oldDeviceName = theDeviceName;
+			}
+		}
+		
+		deleteEmptyFields (instancerRootPath);
+		
+		pconfig("REPLACE", "/TRO/txn_id", time());
+		set("txn_id", txn);
+	}	
+}
+syncConfiguration(get("name"));</PreDiscoveryText>
+	<DiscoveryText serial="1552310486">#</DiscoveryText>
+	<KMConfigurationMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<KMLevelConfiguration dataModelMajorVersion="1" dataModelMinorVersion="1"/>
+		<ConfigurationParameters>
+			<ConfigurationParameter>
+				<AttributeSet id="Configuration" label="Configure script">
+					<Attribute>
+						<List description="" id="Devices" indexedBy="DeviceName" label="Devices">
+							<AttributeSet id="Device_Details" label="Device details">
+								<Attribute>
+									<String description="Device name/IP can be an either alias name or a real host name or an IP address. Enter the forced IP address in case you configure an alias name which can't be resolved to a valid IP address." id="DeviceName" isMandatory="true" label="Device name/IP">
+										<InputValidationRules>
+											<InputValidationRule id="validatePattern">
+												<Params>
+													<Param>^[0-9a-zA-Z._%:-]+$</Param>
+												</Params>
+											</InputValidationRule>
+										</InputValidationRules>
+									</String>
+								</Attribute>
+								<Attribute>
+									<String description="IP address of the device to monitor, leave it blank if the configured Device name/IP is a real host name or an IP address." id="ipAddress" isMandatory="false" label="Forced IP Address">
+										<InputValidationRules>
+											<InputValidationRule id="validatePattern">
+												<Params>
+													<Param><![CDATA[^(?:(^((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?):{1,2}((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)$)|(^(25[0-5]|2[0-4]\d|[0-1]?\d?\d)(\.(25[0-5]|2[0-4]\d|[0-1]?\d?\d)){3}$))]]>
+													</Param>
+												</Params>
+											</InputValidationRule>
+										</InputValidationRules>
+									</String>
+								</Attribute>
+								<Attribute>
+									<String description="The category name for the configured device." id="Category" isMandatory="false" label="Monitoring category" default="Squid system(s)">
+										<InputValidationRules>
+											<InputValidationRule id="validateForbidden">
+												<Params>
+													<Param>
+														<![CDATA[<>\/|":*?]]>
+													</Param>
+												</Params>
+											</InputValidationRule>
+										</InputValidationRules>
+									</String>
+								</Attribute>
+								<Attribute>
+									<String default="22" description="SSH port in order to connect to the configured device." id="Port" isMandatory="false" label="Port">
+										<InputValidationRules>
+											<InputValidationRule id="validateRange">
+												<Params>
+													<Param>0</Param>
+													<Param>65535</Param>
+												</Params>
+											</InputValidationRule>
+										</InputValidationRules>
+									</String>
+								</Attribute>
+								<Attribute>
+									<String default="5" description="Connection timeout in seconds." id="DeviceTimeout" isMandatory="false" label="Timeout (sec)">
+										<InputValidationRules>
+											<InputValidationRule id="validateRange">
+												<Params>
+													<Param>1</Param>
+													<Param>300</Param>
+												</Params>
+											</InputValidationRule>
+										</InputValidationRules>
+									</String>
+								</Attribute>
+								<Attribute>
+									<String default="60" description="Connection validation frequency in seconds." id="DevicePollInterval" isMandatory="false" label="Poll interval (sec)">
+										<InputValidationRules>
+											<InputValidationRule id="validateRange">
+												<Params>
+													<Param>10</Param>
+													<Param>3600</Param>
+												</Params>
+											</InputValidationRule>
+										</InputValidationRules>
+									</String>
+								</Attribute>
+								<Attribute>
+									<AttributeSet id="Usercredentials" label="Credentials configuration" newPopupDialog="collapsed">
+										<Attribute>
+											<String description="Username to connect to the remote host. PATROL Agent default account will be used as the username by leaving this field empty." id="UserName" isMandatory="false" label="Username">
+											</String>
+										</Attribute>
+										<Attribute>
+											<AttributeSet description="Password based authentication details" id="attrset_passauth" label="Password based authentication">
+												<Attribute>
+													<String description="User password for authentication (enter $ character if you want to modify the password and leave it blank)." i18nIdForDescription="14" i18nIdForLabel="13" id="Password" isStorageSecure="true" label="Password">
+													</String>
+												</Attribute>
+											</AttributeSet>
+										</Attribute>
+										<Attribute>
+											<AttributeSet description="Key based authentication details" id="attrset_keyauth" label="Key based authentication" newPopupDialog="collapsed">
+												<Attribute>
+													<String description="Full path to the file that will hold the public key" id="PublicKeyFilePath" label="Public key file path">
+													</String>
+												</Attribute>
+												<Attribute>
+													<String description="Full path to the file that will hold the private key" id="PrivateKeyFilePath" label="Private key file path">
+													</String>
+												</Attribute>
+												<Attribute>
+													<String description="Passphrase to access public and private keys (enter $ character if you want to modify the password and leave it blank)." id="PassPhrase" isStorageSecure="true" label="Passphrase">
+													</String>
+												</Attribute>
+											</AttributeSet>
+										</Attribute>
+									</AttributeSet>
+								</Attribute>
+								<Attribute>
+									<List description="" id="Scripts" indexedBy="ScriptName" label="Scripts">
+										<AttributeSet id="Script_Details" label="Script details">
+											<Attribute>
+												<String description="Script display name, can be any meaningful name associated with the script." id="ScriptName" isMandatory="true" label="Squid instance name" default="Squid">
+													<InputValidationRules>
+														<InputValidationRule id="validatePattern">
+															<Params>
+																<Param>^[0-9a-zA-Z._%:-]+$</Param>
+															</Params>
+														</InputValidationRule>
+													</InputValidationRules>
+												</String>
+											</Attribute>
+											<Attribute>
+												<String description="Full path contains the script name locate on the remote device(e.g: /root/BMC/apps/TSPS_CPU.bash) or a shell command. The script will be copied automatically only when defining specific full path to script and nothing else and if it does not exist on the remote device but exist on the monitoring system on one of the following locations: %PATROL_HOME%/TRO/Conf/Scripts/ScriptFileTransfer/Devices/DeviceName/ or %PATROL_HOME%/TRO/Conf/Scripts/ScriptFileTransfer/ or %PATROL_HOME%/TRO/Conf/Scripts/Samples/), compress file ZIP and archive file TAR are supported as well." id="Path" isMandatory="true" label="Squid data collecting script" default="/tmp/squid-monitor.sh">
+												</String>
+											</Attribute>
+											<Attribute>
+												<String description="Script arguments seperated by a space character that will be passed during execution. e.g: script that measuring a log file size and should get an argument with the name of the log file." id="Arguments" isMandatory="false" label="Arguments">
+												</String>
+											</Attribute>
+											<Attribute>
+												<String description="A Java regular expression to search on the script results. Multi expressions can be defined by seperating each with the ';' character (e.g: expressionA;expressionB;expressionC)." id="RegEx" isMandatory="false" label="Content match">
+												</String>
+											</Attribute>
+											<Attribute>
+												<String default="30" description="Script timeout in seconds." id="ScriptTimeout" isMandatory="false" label="Timeout (sec)">
+													<InputValidationRules>
+														<InputValidationRule id="validateRange">
+															<Params>
+																<Param>1</Param>
+																<Param>600</Param>
+															</Params>
+														</InputValidationRule>
+													</InputValidationRules>
+												</String>
+											</Attribute>
+											<Attribute>
+												<String default="60" description="Script frequency in seconds." id="ScriptPollInterval" isMandatory="false" label="Poll interval (sec)">
+													<InputValidationRules>
+														<InputValidationRule id="validateRange">
+															<Params>
+																<Param>10</Param>
+																<Param>3600</Param>
+															</Params>
+														</InputValidationRule>
+													</InputValidationRules>
+												</String>
+											</Attribute>
+										</AttributeSet>
+									</List>
+								</Attribute>
+							</AttributeSet>
+						</List>
+					</Attribute>
+				</AttributeSet>
+			</ConfigurationParameter>
+		</ConfigurationParameters>
+	</KMConfigurationMetadata></Application>
+</Applications>
+</KMFile>

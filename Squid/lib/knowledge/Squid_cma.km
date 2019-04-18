@@ -1,0 +1,97 @@
+!PATROLV3.6.00i ACE7522AFD86428E598D15CAD130C4A3
+!++
+!
+! PATROL Session Knowledge Module
+!
+!--
+!RELEASE	2019.107
+!REVISION       00
+!PACKAGE        Squid
+!DESCRIPTION	PATROL for Squid
+!PRODUCTCODE    Squid
+
+VERSION 1.7
+
+APPLICATIONS = { 
+  { NAME = "Squid_cma",
+	ACTIVE = True,
+	SECURITY = False,
+	PROPAGATE_STATE = True,
+	CREATE_ICON = False,
+	SUSPEND_GLOBAL_PARAMS = False,
+	DISCOVERY_TIME = 60,
+	DISCOVERY = PSL,
+	PRE_DISCOVERY_TEXT =  1555330408 "function deleteEmptyFields (instancerRootPath)\
+{\
+	local argsList, tempAtt, TROPath;\
+	# ends with \"Path\" is just indicator to know the Path for other non mandatory variables like \"Arguments\" and \"RegEx\"\
+	argsList = grep(\"^/ConfigData/\" . instancerRootPath.\".*Path$\", pconfig(\"LIST\"));\
+	argsList = trim(replace(argsList, \"/Path\", \"\"), \"\\n\", TRIM_LEADING_AND_TRAILING);\
+	\
+	foreach attr (argsList)\
+	{\
+		# delete Arguments\
+		tempAtt = attr.\"/Arguments\";\
+		if(trim(pconfig(\"GET\", tempAtt), \"\\n\", TRIM_LEADING_AND_TRAILING) == \"\")\
+		{\
+			TROPath = replace(tempAtt, \"/ConfigData/\" . instancerRootPath, \"/TRO/TRO_Root\");\
+			pconfig(\"DELETE\", TROPath);\
+		}\
+		\
+		# delete RegEx\
+		tempAtt = attr.\"/RegEx\";\
+		if(trim(pconfig(\"GET\", tempAtt), \"\\n\", TRIM_LEADING_AND_TRAILING) == \"\")\
+		{\
+			TROPath = replace(tempAtt, \"/ConfigData/\" . instancerRootPath, \"/TRO/TRO_Root\");\
+			pconfig(\"DELETE\", TROPath);\
+		}\
+\
+		# delete ScriptTimeout\
+		tempAtt = attr.\"/ScriptTimeout\";\
+		if(trim(pconfig(\"GET\", tempAtt), \"\\n\", TRIM_LEADING_AND_TRAILING) == \"\")\
+		{\
+			TROPath = replace(tempAtt, \"/ConfigData/\" . instancerRootPath, \"/TRO/TRO_Root\");\
+			pconfig(\"DELETE\", TROPath);\
+		}\
+\
+		# delete ScriptPollInterval\
+		tempAtt = attr.\"/ScriptPollInterval\";\
+		if(trim(pconfig(\"GET\", tempAtt), \"\\n\", TRIM_LEADING_AND_TRAILING) == \"\")\
+		{\
+			TROPath = replace(tempAtt, \"/ConfigData/\" . instancerRootPath, \"/TRO/TRO_Root\");\
+			pconfig(\"DELETE\", TROPath);\
+		}\
+	}\
+}\
+\
+function syncConfiguration(instancerRootPath)\
+{\
+	oldDeviceName = \"\";\
+	txn = trim(pconfig(\"GET\", \"/ConfigData/txn_id\"), \"\\n\", TRIM_ALL);\
+	\
+	if (txn != get(\"txn_id\"))\
+	{\
+		foreach attr (grep(\"^/ConfigData/\" . instancerRootPath, pconfig(\"LIST\")))\
+		{\
+			pconfig(\"REPLACE\", replace(attr, \"/ConfigData/\" . instancerRootPath, \"/TRO/TRO_Root\"), pconfig(\"GET\", attr));\
+			theDeviceName = nthargf(attr, \"5\", \"/\");\
+		\
+			if (oldDeviceName == \"\" || oldDeviceName != theDeviceName)\
+			{\
+				sec_store_set(\"/TRO/TRO_Root/Devices/\" . theDeviceName . \"/Password\", sec_store_get(\"/ConfigData/\" . instancerRootPath . \"/Devices/\" . theDeviceName . \"/Password\"), \"TRO_Root;TRO_Device\");\
+				sec_store_set(\"/TRO/TRO_Root/Devices/\" . theDeviceName . \"/PassPhrase\", sec_store_get(\"/ConfigData/\" . instancerRootPath . \"/Devices/\" . theDeviceName . \"/PassPhrase\"), \"TRO_Root;TRO_Device\");\
+				oldDeviceName = theDeviceName;\
+			}\
+		}\
+		\
+		deleteEmptyFields (instancerRootPath);\
+		\
+		pconfig(\"REPLACE\", \"/TRO/txn_id\", time());\
+		set(\"txn_id\", txn);\
+	}	\
+}\
+syncConfiguration(get(\"name\"));",
+	DISCOVERY_TEXT =  1552310486 "#"
+  }
+}
+!31311

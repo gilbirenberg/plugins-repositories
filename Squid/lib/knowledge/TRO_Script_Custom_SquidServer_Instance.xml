@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<KMFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" description="PATROL for Scripting" majorVersion="1" minorVersion="1" package="tro" productcode="tro" release="2.0.00.01" revision="00" xsi:noNamespaceSchemaLocation="KMFile.xsd">
+      
+    <Applications>
+            
+        <Application CDMClass="" active="true" category="System" createIcon="false" discovery="PSL" discoveryTime="0" displayName="Custom SquidServer Instance" helpContextId="709" helpFile="tro.hlp" name="TRO_Script_Custom_SquidServer_Instance" propagateState="true" security="false" suspendGlobalParams="false" type="MONITOR">
+                  
+            <PreDiscoveryText serial="1472050680">set("active",2);</PreDiscoveryText>
+                  
+            <DiscoveryText serial="1472050680">#</DiscoveryText>
+                  
+            <Parameters>
+                        
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-all-requests_per_sec" output="OUTPUT_GRAPH" title="server-all-requests_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                      
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-all-errors_per_sec" output="OUTPUT_GRAPH" title="server-all-errors_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-all-kbytes_in_per_sec" output="OUTPUT_GRAPH" title="server-all-kbytes_in_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-all-kbytes_out_per_sec" output="OUTPUT_GRAPH" title="server-all-kbytes_out_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-http-requests_per_sec" output="OUTPUT_GRAPH" title="server-http-requests_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-http-errors_per_sec" output="OUTPUT_GRAPH" title="server-http-errors_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-http-kbytes_in_per_sec" output="OUTPUT_GRAPH" title="server-http-kbytes_in_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-http-kbytes_out_per_sec" output="OUTPUT_GRAPH" title="server-http-kbytes_out_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-ftp-requests_per_sec" output="OUTPUT_GRAPH" title="server-ftp-requests_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-ftp-errors_per_sec" output="OUTPUT_GRAPH" title="server-ftp-errors_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-ftp-kbytes_in_per_sec" output="OUTPUT_GRAPH" title="server-ftp-kbytes_in_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-ftp-kbytes_out_per_sec" output="OUTPUT_GRAPH" title="server-ftp-kbytes_out_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-other-requests_per_sec" output="OUTPUT_GRAPH" title="server-other-requests_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-other-errors_per_sec" output="OUTPUT_GRAPH" title="server-other-errors_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-other-kbytes_in_per_sec" output="OUTPUT_GRAPH" title="server-other-kbytes_in_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="server-other-kbytes_out_per_sec" output="OUTPUT_GRAPH" title="server-other-kbytes_out_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+            </Parameters>
+                
+        </Application>
+          
+    </Applications>
+    
+</KMFile>

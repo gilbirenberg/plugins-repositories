@@ -1,0 +1,30 @@
+!PATROLV3.2.0 000000000032
+!++
+!
+! PATROL Session Knowledge Module
+!
+! MetaKMLDisplayName = "Squid"
+! MetaKMLDescription = "Plugins Squid monitoring"
+! MetaKMLMandatoryConfig = "False"
+!
+! ###+++ Description
+! #
+! # Contains the application classes for monitoring
+! # script
+! ###---
+!--
+
+KM_LIST = {
+  "Squid_cma.km"
+  "TRO_Script_Custom_SquidClient_Instance.km"
+  "TRO_Script_Custom_SquidClient.km"
+  "TRO_Script_Custom_SquidICP_Instance.km"
+  "TRO_Script_Custom_SquidICP.km"
+  "TRO_Script_Custom_SquidResources_Instance.km"
+  "TRO_Script_Custom_SquidResources.km"
+  "TRO_Script_Custom_SquidServer_Instance.km"
+  "TRO_Script_Custom_SquidServer.km"
+  "TRO_Script_Custom_Squidsyscalls_Instance.km"
+  "TRO_Script_Custom_Squidsyscalls.km"
+}
+! 9999

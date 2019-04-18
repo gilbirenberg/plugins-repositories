@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<KMFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" description="PATROL for Scripting" majorVersion="1" minorVersion="1" package="tro" productcode="tro" release="2.0.00.01" revision="00" xsi:noNamespaceSchemaLocation="KMFile.xsd">
+      
+    <Applications>
+            
+        <Application CDMClass="" active="true" category="System" createIcon="false" discovery="PSL" discoveryTime="0" displayName="Custom Squidsyscalls Instance" helpContextId="709" helpFile="tro.hlp" name="TRO_Script_Custom_Squidsyscalls_Instance" propagateState="true" security="false" suspendGlobalParams="false" type="MONITOR">
+                  
+            <PreDiscoveryText serial="1472050680">set("active",2);</PreDiscoveryText>
+                  
+            <DiscoveryText serial="1472050680">#</DiscoveryText>
+                  
+            <Parameters>
+                        
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-disk-opens_per_sec" output="OUTPUT_GRAPH" title="syscalls-disk-opens_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                      
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-disk-closes_per_sec" output="OUTPUT_GRAPH" title="syscalls-disk-closes_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-disk-reads_per_sec" output="OUTPUT_GRAPH" title="syscalls-disk-reads_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-disk-writes_per_sec" output="OUTPUT_GRAPH" title="syscalls-disk-writes_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-disk-seeks_per_sec" output="OUTPUT_GRAPH" title="syscalls-disk-seeks_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-disk-unlinks_per_sec" output="OUTPUT_GRAPH" title="syscalls-disk-unlinks_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-sock-accepts_per_sec" output="OUTPUT_GRAPH" title="syscalls-sock-accepts_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-sock-sockets_per_sec" output="OUTPUT_GRAPH" title="syscalls-sock-sockets_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-sock-connects_per_sec" output="OUTPUT_GRAPH" title="syscalls-sock-connects_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-sock-binds_per_sec" output="OUTPUT_GRAPH" title="syscalls-sock-binds_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-sock-closes_per_sec" output="OUTPUT_GRAPH" title="syscalls-sock-closes_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-sock-reads_per_sec" output="OUTPUT_GRAPH" title="syscalls-sock-reads_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-sock-writes_per_sec" output="OUTPUT_GRAPH" title="syscalls-sock-writes_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-sock-recvfroms_per_sec" output="OUTPUT_GRAPH" title="syscalls-sock-recvfroms_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="syscalls-sock-sendtos_per_sec" output="OUTPUT_GRAPH" title="syscalls-sock-sendtos_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+            </Parameters>
+                
+        </Application>
+          
+    </Applications>
+    
+</KMFile>

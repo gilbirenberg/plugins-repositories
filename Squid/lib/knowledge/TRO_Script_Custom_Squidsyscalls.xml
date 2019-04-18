@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<KMFile description="PATROL for Scripting" majorVersion="1" minorVersion="1" package="tro" productcode="tro" release="2.0.00.01" revision="00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="KMFile.xsd">
+
+  <Applications>
+    <Application active="true" category="System" createIcon="false" discovery="PSL" discoveryTime="0" displayName="Custom Squidsyscalls" helpContextId="708" helpFile="tro.hlp" name="TRO_Script_Custom_Squidsyscalls" propagateState="true" security="false" suspendGlobalParams="false" type="CONTAINER">
+      <PreDiscoveryText serial="1472049259">set("active",2);</PreDiscoveryText>
+      <DiscoveryText serial="1472049259">set("active",2);</DiscoveryText>
+    </Application>
+  </Applications>
+
+</KMFile>

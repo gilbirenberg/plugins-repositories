@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<KMFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" description="PATROL for Scripting" majorVersion="1" minorVersion="2" package="tro" productcode="tro" release="2.0.00.01" revision="00" xsi:noNamespaceSchemaLocation="KMFile.xsd">
+      
+    <Applications>
+            
+        <Application CDMClass="" active="true" category="System" createIcon="false" discovery="PSL" discoveryTime="0" displayName="Custom SquidICP Instance" helpContextId="709" helpFile="tro.hlp" name="TRO_Script_Custom_SquidICP_Instance" propagateState="true" security="false" suspendGlobalParams="false" type="MONITOR">
+                  
+            <PreDiscoveryText serial="1472050680">set("active",2);</PreDiscoveryText>
+                  
+            <DiscoveryText serial="1472050680">#</DiscoveryText>
+                  
+            <Parameters>
+                        
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-pkts_sent_per_sec" output="OUTPUT_GRAPH" title="icp-pkts_sent_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                      
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-pkts_recv_per_sec" output="OUTPUT_GRAPH" title="icp-pkts_recv_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-queries_sent_per_sec" output="OUTPUT_GRAPH" title="icp-queries_sent_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-replies_sent_per_sec" output="OUTPUT_GRAPH" title="icp-replies_sent_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-queries_recv_per_sec" output="OUTPUT_GRAPH" title="icp-queries_recv_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-replies_recv_per_sec" output="OUTPUT_GRAPH" title="icp-replies_recv_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-replies_queued_per_sec" output="OUTPUT_GRAPH" title="icp-replies_queued_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-query_timeouts_per_sec" output="OUTPUT_GRAPH" title="icp-query_timeouts_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-kbytes_sent_per_sec" output="OUTPUT_GRAPH" title="icp-kbytes_sent_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-kbytes_recv_per_sec" output="OUTPUT_GRAPH" title="icp-kbytes_recv_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-q_kbytes_sent_per_sec" output="OUTPUT_GRAPH" title="icp-q_kbytes_sent_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-r_kbytes_sent_per_sec" output="OUTPUT_GRAPH" title="icp-r_kbytes_sent_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-q_kbytes_recv_per_sec" output="OUTPUT_GRAPH" title="icp-q_kbytes_recv_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-r_kbytes_recv_per_sec" output="OUTPUT_GRAPH" title="icp-r_kbytes_recv_per_sec" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-query_median_svc_time_seconds" output="OUTPUT_GRAPH" title="icp-query_median_svc_time_seconds" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+                <Parameter active="true" autoRescale="true" check="false" format="%f" historyLevel="false" historySpan="0" historyTime="600" monitor="true" name="icp-reply_median_svc_time_seconds" output="OUTPUT_GRAPH" title="icp-reply_median_svc_time_seconds" type="CONSUMER" units="#" yAxisMax="2147483647" yAxisMin="0">
+                              
+                    <ParamMetadata applicationCollectionStatus="false" availability="false" config="false" delta="false" graphByDefault="true" kpi="false" monitorForAbnormalities="false" normalDistribution="false" responseTime="false" statistical="true"/>
+                              
+                    <BaseCommand>
+                                    
+                        <Command commandType="OS" computerType="ALL_COMPUTERS">
+                                          
+                            <Commandtext serial="1472050856">exit;</Commandtext>
+                                        
+                        </Command>
+                                  
+                    </BaseCommand>
+                              
+                    <Ranges>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="BORDER" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="0" name="ALARM1" state="OK"/>
+                                    
+                        <Range active="false" alarmWhen="ALARM_INSTANT" alarmWhenN="0" maximum="100" minimum="100" name="ALARM2" state="OK"/>
+                                  
+                    </Ranges>
+                            
+                </Parameter>
+            </Parameters>
+                
+        </Application>
+          
+    </Applications>
+    
+</KMFile>
