@@ -3,4 +3,3 @@ WEB|Tomcat|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/m
 DB|IBM DB2|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/DB2/ibm_db2.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/DB2/version.txt
 OS-SYSTEM|LinuxOS|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/LinuxOS/linuxos.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/LinuxOS/version.txt
 BIGDATA|Cassandra|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/Cassandra/cassandra.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/Cassandra/version.txt
-test|gili|test|dana
