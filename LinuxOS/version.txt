@@ -1,2 +1,2 @@
-1.2.00|https://github.com/gilbirenberg/plugins-repositories/raw/master/LinuxOS/nuk_LINUX-WINDOWS_1200.zip|
-1.2.00.04|
+1.2.00|https://github.com/gilbirenberg/plugins-repositories/raw/master/LinuxOS/nuk_LINUX-WINDOWS_1200.zip|old
+1.2.00.04|https://github.com/gilbirenberg/plugins-repositories/raw/master/LinuxOS/nuk_LINUX-WINDOWS_120004.zip|latest
