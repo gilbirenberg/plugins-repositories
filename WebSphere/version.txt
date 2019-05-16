@@ -1,2 +1,2 @@
-3.1.00|http://localhost/location
-3.2.00|http://localhost/location
+3.1.00|pmw_ALL_3100.zip
+
