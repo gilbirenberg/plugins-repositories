@@ -5,7 +5,7 @@ DB|IBM_DB2|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/m
 DB|MSSql|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/MSsql/sqlserver.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/MSsql/version.txt
 DB|Oracle|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/oracle/oracle.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/oracle/version.txt
 OS-SYSTEM|LinuxOS|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/LinuxOS/linuxos.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/LinuxOS/version.txt
-OS-SYSTEM|AIXOS|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/aix/aix.jpeg|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/aix/version.txt
+OS-SYSTEM|AIXOS|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/aix/IBM-AIX.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/aix/version.txt
 OS-SYSTEM|SolarisOS|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/solaris/Oracle_Solaris_OS.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/solaris/version.txt
 OS-SYSTEM|WindowsOS|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/windowsOS/windows_service.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/windowsOS/version.txt
 NoSQL-DB|Cassandra|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/Cassandra/cassandra.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/Cassandra/version.txt
