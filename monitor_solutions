@@ -18,3 +18,6 @@ CONTAINERS|Docker|https://raw.githubusercontent.com/gilbirenberg/plugins-reposit
 CONTAINERS|Kubernetes|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/kubernetes/kube_controller_manager.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/kubernetes/version.txt
 BIGDATA|Hadoop|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/hadoop/hadoop.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/hadoop/version.txt
 BIGDATA|ElasticSearch|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/elastic/elastic.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/elastic/version.txt
+MESSAGING|ActiveMQ|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/ActiveMQ/activemq.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/ActiveMQ/version.txt
+MESSAGING|Kafka|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/kafka/kafka.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/kafka/version.txt
+NETWORK|Nginx|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/nginx/nginx.png|https://raw.githubusercontent.com/gilbirenberg/plugins-repositories/master/nginx/version.txt
