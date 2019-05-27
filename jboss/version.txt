@@ -1,1 +1,2 @@
+3.2.00|https://github.com/gilbirenberg/plugins-repositories/raw/master/jboss/PJB_ALL_3200.zip|latest
 
