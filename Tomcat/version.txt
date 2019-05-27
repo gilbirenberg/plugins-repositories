@@ -1,1 +1,2 @@
-3.1.00
+3.0.10|https://github.com/gilbirenberg/plugins-repositories/raw/master/Tomcat/tctgjskit_ALL_3010.zip|latest
+
